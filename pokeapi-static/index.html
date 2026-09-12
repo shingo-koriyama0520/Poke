@@ -1,0 +1,2231 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTMLとCSSだけで動作するポケモン図鑑">
+    <title>
+      ポケモン図鑑 | HTMLとCSSだけで作成
+    </title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">
+          POKEMON DICTIONARY
+        </p>
+        <h1>
+          ポケモン図鑑
+        </h1>
+        <p class="hero__lead">
+          HTMLとCSSだけで作成された図鑑。
+        </p>
+        <div class="hero__meta">
+          <span>図鑑 No.0001 - 0050</span>
+          <span>50匹収録</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="guide-title">
+        <div>
+          <p class="section-label">
+            FIELD NOTES
+          </p>
+          <h2 id="guide-title">
+            仲間たち
+          </h2>
+        </div>
+        <p class="intro__copy">
+          カードを開くとタイプと基本データを確認できます。
+        </p>
+      </section>
+      <section class="grid" aria-label="ポケモン一覧">
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="フシギダネ">
+            <span class="number">
+              No.0001
+            </span>
+            <strong>
+              フシギダネ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  たねポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.7 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  6.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" alt="フシギソウ">
+            <span class="number">
+              No.0002
+            </span>
+            <strong>
+              フシギソウ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  たねポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  13.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" alt="フシギバナ">
+            <span class="number">
+              No.0003
+            </span>
+            <strong>
+              フシギバナ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  たねポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  2.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  100.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="ヒトカゲ">
+            <span class="number">
+              No.0004
+            </span>
+            <strong>
+              ヒトカゲ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fire">
+              ほのお
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  とかげポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  8.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" alt="リザード">
+            <span class="number">
+              No.0005
+            </span>
+            <strong>
+              リザード
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fire">
+              ほのお
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  かえんポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.1 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  19.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" alt="リザードン">
+            <span class="number">
+              No.0006
+            </span>
+            <strong>
+              リザードン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fire">
+              ほのお
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  かえんポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.7 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  90.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="ゼニガメ">
+            <span class="number">
+              No.0007
+            </span>
+            <strong>
+              ゼニガメ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--water">
+              みず
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  かめのこポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  9.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png" alt="カメール">
+            <span class="number">
+              No.0008
+            </span>
+            <strong>
+              カメール
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--water">
+              みず
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  かめポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  22.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png" alt="カメックス">
+            <span class="number">
+              No.0009
+            </span>
+            <strong>
+              カメックス
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--water">
+              みず
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  こうらポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  85.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png" alt="キャタピー">
+            <span class="number">
+              No.0010
+            </span>
+            <strong>
+              キャタピー
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  いもむしポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  2.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png" alt="トランセル">
+            <span class="number">
+              No.0011
+            </span>
+            <strong>
+              トランセル
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  さなぎポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.7 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  9.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png" alt="バタフリー">
+            <span class="number">
+              No.0012
+            </span>
+            <strong>
+              バタフリー
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ちょうちょポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.1 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  32.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png" alt="ビードル">
+            <span class="number">
+              No.0013
+            </span>
+            <strong>
+              ビードル
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  けむしポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  3.2 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png" alt="コクーン">
+            <span class="number">
+              No.0014
+            </span>
+            <strong>
+              コクーン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  さなぎポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  10.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png" alt="スピアー">
+            <span class="number">
+              No.0015
+            </span>
+            <strong>
+              スピアー
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくばちポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  29.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png" alt="ポッポ">
+            <span class="number">
+              No.0016
+            </span>
+            <strong>
+              ポッポ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ことりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  1.8 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png" alt="ピジョン">
+            <span class="number">
+              No.0017
+            </span>
+            <strong>
+              ピジョン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  とりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.1 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  30.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png" alt="ピジョット">
+            <span class="number">
+              No.0018
+            </span>
+            <strong>
+              ピジョット
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  とりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  39.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png" alt="コラッタ">
+            <span class="number">
+              No.0019
+            </span>
+            <strong>
+              コラッタ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  3.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png" alt="ラッタ">
+            <span class="number">
+              No.0020
+            </span>
+            <strong>
+              ラッタ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.7 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  18.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png" alt="オニスズメ">
+            <span class="number">
+              No.0021
+            </span>
+            <strong>
+              オニスズメ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ことりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  2.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--normal">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png" alt="オニドリル">
+            <span class="number">
+              No.0022
+            </span>
+            <strong>
+              オニドリル
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  くちばしポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.2 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  38.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png" alt="アーボ">
+            <span class="number">
+              No.0023
+            </span>
+            <strong>
+              アーボ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  へびポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  2.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  6.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png" alt="アーボック">
+            <span class="number">
+              No.0024
+            </span>
+            <strong>
+              アーボック
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  コブラポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  3.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  65.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--electric">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="ピカチュウ">
+            <span class="number">
+              No.0025
+            </span>
+            <strong>
+              ピカチュウ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--electric">
+              でんき
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.4 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  6.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--electric">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png" alt="ライチュウ">
+            <span class="number">
+              No.0026
+            </span>
+            <strong>
+              ライチュウ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--electric">
+              でんき
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.8 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  30.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--ground">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png" alt="サンド">
+            <span class="number">
+              No.0027
+            </span>
+            <strong>
+              サンド
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--ground">
+              じめん
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  12.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--ground">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png" alt="サンドパン">
+            <span class="number">
+              No.0028
+            </span>
+            <strong>
+              サンドパン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--ground">
+              じめん
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ねずみポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  29.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png" alt="ニドラン♀">
+            <span class="number">
+              No.0029
+            </span>
+            <strong>
+              ニドラン♀
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくばりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.4 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  7.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png" alt="ニドリーナ">
+            <span class="number">
+              No.0030
+            </span>
+            <strong>
+              ニドリーナ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくばりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.8 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  20.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png" alt="ニドクイン">
+            <span class="number">
+              No.0031
+            </span>
+            <strong>
+              ニドクイン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <span class="type type--ground">
+              じめん
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ドリルポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  60.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png" alt="ニドラン♂">
+            <span class="number">
+              No.0032
+            </span>
+            <strong>
+              ニドラン♂
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくばりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  9.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png" alt="ニドリーノ">
+            <span class="number">
+              No.0033
+            </span>
+            <strong>
+              ニドリーノ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくばりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.9 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  19.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png" alt="ニドキング">
+            <span class="number">
+              No.0034
+            </span>
+            <strong>
+              ニドキング
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <span class="type type--ground">
+              じめん
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ドリルポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.4 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  62.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fairy">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png" alt="ピッピ">
+            <span class="number">
+              No.0035
+            </span>
+            <strong>
+              ピッピ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fairy">
+              フェアリー
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ようせいポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  7.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fairy">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png" alt="ピクシー">
+            <span class="number">
+              No.0036
+            </span>
+            <strong>
+              ピクシー
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fairy">
+              フェアリー
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ようせいポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  40.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fire">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png" alt="ロコン">
+            <span class="number">
+              No.0037
+            </span>
+            <strong>
+              ロコン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fire">
+              ほのお
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  きつねポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  9.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fire">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png" alt="キュウコン">
+            <span class="number">
+              No.0038
+            </span>
+            <strong>
+              キュウコン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--fire">
+              ほのお
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  きつねポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.1 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  19.9 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fairy">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png" alt="プリン">
+            <span class="number">
+              No.0039
+            </span>
+            <strong>
+              プリン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--fairy">
+              フェアリー
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ふうせんポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  5.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--fairy">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png" alt="プクリン">
+            <span class="number">
+              No.0040
+            </span>
+            <strong>
+              プクリン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--normal">
+              ノーマル
+            </span>
+            <span class="type type--fairy">
+              フェアリー
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ふうせんポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  12.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png" alt="ズバット">
+            <span class="number">
+              No.0041
+            </span>
+            <strong>
+              ズバット
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  こうもりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.8 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  7.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--poison">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png" alt="ゴルバット">
+            <span class="number">
+              No.0042
+            </span>
+            <strong>
+              ゴルバット
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--poison">
+              どく
+            </span>
+            <span class="type type--flying">
+              ひこう
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  こうもりポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.6 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  55.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--grass">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png" alt="ナゾノクサ">
+            <span class="number">
+              No.0043
+            </span>
+            <strong>
+              ナゾノクサ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ざっそうポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  5.4 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--grass">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png" alt="クサイハナ">
+            <span class="number">
+              No.0044
+            </span>
+            <strong>
+              クサイハナ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  ざっそうポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.8 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  8.6 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--grass">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png" alt="ラフレシア">
+            <span class="number">
+              No.0045
+            </span>
+            <strong>
+              ラフレシア
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--grass">
+              くさ
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  フラワーポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.2 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  18.6 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--bug">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png" alt="パラス">
+            <span class="number">
+              No.0046
+            </span>
+            <strong>
+              パラス
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--grass">
+              くさ
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  きのこポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.3 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  5.4 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--bug">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png" alt="パラセクト">
+            <span class="number">
+              No.0047
+            </span>
+            <strong>
+              パラセクト
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--grass">
+              くさ
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  きのこポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  29.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--bug">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png" alt="コンパン">
+            <span class="number">
+              No.0048
+            </span>
+            <strong>
+              コンパン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  こんちゅうポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.0 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  30.0 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--bug">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png" alt="モルフォン">
+            <span class="number">
+              No.0049
+            </span>
+            <strong>
+              モルフォン
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--bug">
+              むし
+            </span>
+            <span class="type type--poison">
+              どく
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  どくがポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  1.5 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  12.5 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+        <details class="card card--ground">
+          <summary>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png" alt="ディグダ">
+            <span class="number">
+              No.0050
+            </span>
+            <strong>
+              ディグダ
+            </strong>
+          </summary>
+          <div class="card__details">
+            <span class="type type--ground">
+              じめん
+            </span>
+            <dl>
+              <div>
+                <dt>
+                  分類
+                </dt>
+                <dd>
+                  もぐらポケモン
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  身長
+                </dt>
+                <dd>
+                  0.2 m
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  体重
+                </dt>
+                <dd>
+                  0.8 kg
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </details>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>
+        Sprites by
+        <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">
+          PokéAPI
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>
