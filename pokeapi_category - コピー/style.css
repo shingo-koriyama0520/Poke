@@ -126,67 +126,6 @@ body {
   background: #555;
 }
 
-/* タイプボタンと同じ角丸・余白で並べ替え操作をまとめる。 */
-.sort-controls {
-  max-width: 720px;
-  margin: 12px auto 48px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 0.75rem;
-}
-
-.sort-controls .type-filter {
-  min-height: 32px;
-  font-family: inherit;
-}
-
-.sort-select {
-  background: #555;
-  max-width: 100%;
-}
-
-.sort-controls .selected {
-  opacity: 1;
-}
-
-.sort-controls :disabled {
-  cursor: default;
-  opacity: 0.45;
-  transform: none;
-  box-shadow: none;
-}
-
-.sort-controls :focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 3px;
-}
-
-.sort-status {
-  margin: 8px 0;
-  font-size: 0.75rem;
-}
-
-.sort-status:empty {
-  display: none;
-}
-
-@media (max-width: 480px) {
-  .type-filters {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .sort-controls {
-    gap: 6px;
-  }
-
-  .sort-controls .type-filter {
-    padding-inline: 8px;
-  }
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));

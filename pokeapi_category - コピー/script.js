@@ -7,10 +7,6 @@ const grid = document.getElementById("grid");
 const countEl = document.getElementById("count");
 const searchInput = document.getElementById("search");
 const typeFilters = document.getElementById("typeFilters");
-const sortStat = document.getElementById("sortStat");
-const sortAsc = document.getElementById("sortAsc");
-const sortDesc = document.getElementById("sortDesc");
-const sortStatus = document.getElementById("sortStatus");
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modalBody");
 const closeModalBtn = document.getElementById("closeModal");
@@ -67,73 +63,6 @@ countEl.textContent = `${TOTAL_POKEMON}匹`;
 
 const nameCache = new Map();
 const typeCache = new Map();
-const statCache = new Map();
-const statNames = ["hp", "attack", "defense", "special-attack", "special-defense", "speed"];
-let sortDirection = "asc";
-
-// 1025匹の能力値を一括取得し、並べ替え時には保持した値を使う。
-async function fetchAllPokemonStats() {
-  const query = `
-    query {
-      pokemon_v2_pokemonstat(where: {pokemon_id: {_gte: 1, _lte: ${TOTAL_POKEMON}}}) {
-        pokemon_id
-        base_stat
-        pokemon_v2_stat { name }
-      }
-    }
-  `;
-  const res = await fetch(GRAPHQL_API, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query }),
-  });
-  if (!res.ok) throw new Error("Failed to fetch Pokemon stats");
-  const json = await res.json();
-  if (json.errors) throw new Error("Failed to fetch Pokemon stats");
-  const stats = new Map();
-  for (const row of json.data?.pokemon_v2_pokemonstat ?? []) {
-    const name = row.pokemon_v2_stat?.name;
-    if (!statNames.includes(name) || !Number.isFinite(row.base_stat)) continue;
-    if (!stats.has(row.pokemon_id)) stats.set(row.pokemon_id, {});
-    stats.get(row.pokemon_id)[name] = row.base_stat;
-  }
-  // 一部が欠けたデータでは並べ替えを有効にしない。
-  for (let id = 1; id <= TOTAL_POKEMON; id++) {
-    const values = stats.get(id);
-    if (!values || !statNames.every(name => Number.isFinite(values[name]))) {
-      throw new Error("Incomplete Pokemon stats");
-    }
-    values.total = statNames.reduce((total, name) => total + values[name], 0);
-  }
-  stats.forEach((values, id) => statCache.set(id, values));
-}
-
-function sortCards() {
-  const stat = sortStat.value;
-  const cards = Array.from(grid.querySelectorAll(".card"));
-  cards.sort((a, b) => {
-    const aId = Number(a.dataset.id);
-    const bId = Number(b.dataset.id);
-    if (stat === "id") return aId - bId;
-    const difference = statCache.get(aId)[stat] - statCache.get(bId)[stat];
-    return (sortDirection === "asc" ? difference : -difference) || aId - bId;
-  });
-  // カード自体を移動して、画像のlazy loadingとクリック処理を維持する。
-  const fragment = document.createDocumentFragment();
-  cards.forEach(card => fragment.appendChild(card));
-  grid.appendChild(fragment);
-}
-
-function updateSortControls() {
-  const active = sortStat.value !== "id";
-  sortStat.classList.toggle("selected", active);
-  [sortAsc, sortDesc].forEach((button, index) => {
-    const selected = sortDirection === (index === 0 ? "asc" : "desc");
-    button.disabled = !active;
-    button.classList.toggle("selected", active && selected);
-    button.setAttribute("aria-pressed", String(selected));
-  });
-}
 
 async function fetchAllJapaneseNames() {
   const query = `
@@ -320,10 +249,9 @@ async function init() {
   grid.innerHTML = `<div class="loading">読み込み中...</div>`;
   try {
     // 名前とタイプを並行して取得
-    await Promise.allSettled([
+    await Promise.all([
       fetchAllJapaneseNames(),
-      fetchAllPokemonTypes(),
-      fetchAllPokemonStats()
+      fetchAllPokemonTypes()
     ]);
   } catch (err) {
     console.error(err);
@@ -331,11 +259,6 @@ async function init() {
   buildTypeFilters();
   buildGrid();
   filterCards();
-  sortStat.disabled = statCache.size !== TOTAL_POKEMON;
-  sortStatus.textContent = sortStat.disabled
-    ? "能力値を取得できませんでした。再読み込みで再試行できます。"
-    : "";
-  updateSortControls();
 }
 
 async function openDetail(id) {
@@ -451,18 +374,5 @@ searchInput.addEventListener("input", () => {
     card.classList.toggle("hidden", !matches);
   });
 });*/
-
-sortStat.addEventListener("change", () => {
-  updateSortControls();
-  sortCards();
-});
-
-[sortAsc, sortDesc].forEach((button, index) => {
-  button.addEventListener("click", () => {
-    sortDirection = index === 0 ? "asc" : "desc";
-    updateSortControls();
-    sortCards();
-  });
-});
 
 init();
