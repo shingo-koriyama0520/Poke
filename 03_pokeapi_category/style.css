@@ -20,8 +20,7 @@ body {
   color: #fff;
   padding: 20px 16px;
   text-align: center;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 10;
   isolation: isolate;
 }
@@ -43,14 +42,15 @@ body {
   content: "";
   position: absolute;
   z-index: 0;
-  width: 72px;
-  height: 72px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
   left: 50%;
   /* 円の直径部分が、黒い線の中心と重なる位置。 */
-  bottom: -36px;
+  bottom: -18px;
   transform: translateX(-50%);
   border-radius: 50%;
-  border: 12px solid #242424;
+  border: 8px solid #242424;
   background: #fff;
 }
 
@@ -83,10 +83,10 @@ body {
 
 .type-filters {
   width: 100%;
-  max-width: 720px;
+  max-width: 1080px;
   margin: 12px auto 0;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 8px;
 }
 
@@ -114,12 +114,22 @@ body {
 }
 
 .reset-button {
+  grid-column: 1;
   background: #555;
   color: #fff;
 }
 
 .reset-button:hover {
   background: #333;
+}
+
+/* 狭い画面では、タイプ名とボタンの押しやすさを保つ。 */
+@media (max-width: 760px) {
+  .type-filters {
+    max-width: 480px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
 }
 
 .all-type {
@@ -130,7 +140,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
   gap: 10px;
-  padding: 16px;
+  padding: 26px 16px 16px;
   max-width: 1200px;
   margin: 0 auto;
 }
