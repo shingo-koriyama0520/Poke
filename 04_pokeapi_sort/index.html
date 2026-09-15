@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ポケモン図鑑</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>ポケモン図鑑</h1>
+    <p id="count" class="count"></p>
+    <input id="search" class="search" type="text" placeholder="名前または番号で検索">
+    <!-- タイプ絞り込みボタン -->
+    <div id="typeFilters" class="type-filters"></div>
+    <div class="sort-controls" aria-label="能力値による並べ替え">
+      <label for="sortStat">並べ替え</label>
+      <select id="sortStat" class="sort-select">
+        <option value="">図鑑番号順</option>
+        <option value="hp">HP</option>
+        <option value="attack">こうげき</option>
+        <option value="defense">ぼうぎょ</option>
+        <option value="special-attack">とくこう</option>
+        <option value="special-defense">とくぼう</option>
+        <option value="speed">すばやさ</option>
+        <option value="total">合計</option>
+      </select>
+      <button id="sortDirection" class="sort-direction" type="button" disabled>降順</button>
+    </div>
+  </header>
+
+  <main id="grid" class="grid"></main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn" aria-label="閉じる">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Data from <a href="https://pokeapi.co/" target="_blank" rel="noopener noreferrer">PokéAPI</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
