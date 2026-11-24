@@ -67,7 +67,7 @@ const typeCache = new Map();
 async function fetchAllJapaneseNames() {
   const query = `
     query {
-      pokemon_v2_pokemonspeciesname(
+      pokemonspeciesname(
         where: {
           language_id: { _eq: 1 }
           pokemon_species_id: { _lte: ${TOTAL_POKEMON} }
@@ -85,7 +85,7 @@ async function fetchAllJapaneseNames() {
   });
   if (!res.ok) throw new Error("Failed to fetch names");
   const json = await res.json();
-  const rows = json.data?.pokemon_v2_pokemonspeciesname ?? [];
+  const rows = json.data?.pokemonspeciesname ?? [];
   for (const row of rows) {
     nameCache.set(row.pokemon_species_id, row.name);
   }
@@ -94,14 +94,14 @@ async function fetchAllJapaneseNames() {
 async function fetchAllPokemonTypes() {
   const query = `
     query {
-      pokemon_v2_pokemontype(
+      pokemontype(
         where: {
           pokemon_id: {_lte: ${TOTAL_POKEMON}}
         }
       ) {
         pokemon_id
         type_id
-        pokemon_v2_type {
+        type {
           name
         }
       }
@@ -116,13 +116,13 @@ async function fetchAllPokemonTypes() {
     throw new Error("Failed to fetch Pokemon types");
   }
   const json = await res.json();
-  const rows = json.data?.pokemon_v2_pokemontype ?? [];
+  const rows = json.data?.pokemontype ?? [];
   for (let id = 1; id <= TOTAL_POKEMON; id++) {
     typeCache.set(id, []);
   }
   for (const row of rows) {
     const types = typeCache.get(row.pokemon_id) || [];
-    const typeName = row.pokemon_v2_type?.name;
+    const typeName = row.type?.name;
     if (typeName) {
       types.push(typeName);
     }
