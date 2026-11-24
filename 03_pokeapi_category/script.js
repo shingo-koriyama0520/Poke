@@ -1,7 +1,7 @@
 const TOTAL_POKEMON = 1025;
 const SPRITE_BASE = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon";
 const API_BASE = "https://pokeapi.co/api/v2/pokemon";
-const GRAPHQL_API = "https://beta.pokeapi.co/graphql/v1beta";
+const GRAPHQL_API = "https://graphql.pokeapi.co/v1beta2";
 
 const grid = document.getElementById("grid");
 const countEl = document.getElementById("count");
@@ -78,7 +78,7 @@ async function fetchAllJapaneseNames() {
       }
     }
   `;
-  const res = await fetch("https://beta.pokeapi.co/graphql/v1beta", {
+  const res = await fetch(GRAPHQL_API, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ query }),
